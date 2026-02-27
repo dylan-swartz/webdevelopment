@@ -174,3 +174,23 @@ nav a:hover {
   border-top: 1px solid;
   border-right: 1px solid;
 }
+/* --- ADDITIONS BY DYLAN: IMAGE LAYOUT --- */
+
+/* Container for side-by-side images */
+.content-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Space between the images */
+  margin: 20px 0;
+  flex-wrap: wrap; /* Allows stacking on mobile devices */
+}
+
+/* Overrides the default 'block' behavior to allow images to be side-by-side */
+.content-images img {
+  display: inline-block;
+  width: 100%;
+  max-width: 350px; /* Limits the size so they don't look too big */
+  height: auto;
+  margin: 0; /* Removes the auto-centering margin from the global rule */
+}
