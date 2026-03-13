@@ -194,3 +194,26 @@ nav a:hover {
   height: auto;
   margin: 0; /* Removes the auto-centering margin from the global rule */
 }
+/* This targets the container holding the three cards */
+.content-images {
+    display: flex;
+    justify-content: center; /* Centers the group */
+    align-items: flex-start; /* Aligns them at the top */
+    gap: 20px;               /* Space between cards */
+    margin: 30px auto;
+}
+
+/* This targets each individual card (the div around the image and text) */
+.feature-card {
+    flex: 1;                 /* Makes all three columns equal width */
+    max-width: 300px;        /* Prevents them from getting too wide */
+    text-align: center;
+}
+
+/* The magic for image sizing */
+.feature-card img {
+    width: auto;             /* Keeps the aspect ratio correct */
+    height: 150px;           /* Sets a uniform height for all icons */
+    object-fit: contain;     /* Ensures the icon isn't stretched or cropped */
+    margin-bottom: 10px;
+}
