@@ -105,6 +105,7 @@ footer {
     margin-top: 40px;
     border-top: 4px solid var(--primary-color);
     flex-shrink: 0;
+
 }
 
 footer p {
@@ -208,29 +209,53 @@ footer a {
 }
 
 /* --- MOBILE RESPONSIVENESS --- */
-@media screen and (max-width: 768px) {
-    .local-background .content-images {
-        flex-direction: column;
-        align-items: center;
-        gap: 40px;
+@media screen and (max-width: 900px) {
+    body {
+        text-align: center;
     }
 
-    .feature-card {
-        max-width: 100%;
-        width: 90%;
-    }
-
+    /* 1. Fix the Header & Nav */
     header {
         flex-direction: column;
-        text-align: center;
+        padding: 20px 5%;
+        gap: 15px;
     }
 
     nav {
         justify-content: center;
-        padding-left: 0;
+        padding: 0;
+        flex-wrap: wrap;
     }
 
-    /* Stacking Philosophy for Mobile */
+    nav a {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+
+    /* 2. Fix the Contact Grid (Stack them!) */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        padding: 10px;
+        margin: 20px auto;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    /* 3. Fix the Feature Cards on the Main Page */
+    .local-background .content-images {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .feature-card {
+        width: 90%;
+        max-width: 350px;
+    }
+
+    /* 4. Fix Philosophy Section (Image on top of text) */
     .philosophy {
         flex-direction: column;
         text-align: center;
@@ -238,12 +263,19 @@ footer a {
     }
 
     .philosophy img {
-        flex: 1;
         max-width: 100%;
     }
 
     .philosophy .philosophy-text {
         text-align: center;
+    }
+
+    /* 5. Fix the Background Image scaling */
+    .local-background {
+        width: 100%;
+        left: 0;
+        transform: none;
+        padding: 40px 0;
     }
 }
 /* --- SOCIAL MEDIA ICON STYLING --- */
@@ -392,8 +424,14 @@ footer a {
 .banner-callout p { color: white; margin: 0; }
 
 /* Mobile Stack */
-@media (max-width: 900px) {
-    .contact-grid { grid-template-columns: 1fr; }
+@media screen and (min-width: 901px) {
+    .contact-grid {
+        grid-template-columns: 2fr 1fr;
+    }
+    
+    header {
+        flex-direction: row;
+    }
 }
 /* --- FINAL CONTACT HEADING STYLE --- */
 /* --- FORCE RED HEADING --- */
