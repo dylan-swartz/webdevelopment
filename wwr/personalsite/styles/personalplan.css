@@ -610,3 +610,31 @@ body main .form-container h2 {
     margin-top: 40px;
     border-top: 4px solid var(--secondary-color);
 }
+@media screen and (max-width: 900px) {
+    /* 1. Force the row to stack vertically (Image top, Text bottom) */
+    .service-row, .service-row.reverse {
+        flex-direction: column !important;
+        gap: 15px;
+        margin-bottom: 40px;
+    }
+
+    /* 2. Make the text card fill the screen width */
+    .service-text.card {
+        width: 100%;
+        text-align: center !important; /* Centers the heading and paragraph */
+        padding: 30px 20px;
+        box-sizing: border-box; /* Prevents padding from 'pushing' the card off-screen */
+    }
+
+    /* 3. Center the icon and subtitle together */
+    .service-header {
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    /* 4. Fix the image size so it isn't tiny */
+    .service-image img {
+        max-width: 100%;
+        height: auto;
+    }
+}
