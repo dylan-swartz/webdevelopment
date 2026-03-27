@@ -23,20 +23,25 @@
 
 /* --- GENERAL STYLES --- */
 body {
-  margin: 0;
-  padding: 0;
-  font-size: 18px;
-  font-family: var(--paragraph-font);
-  background-color: var(--accent2-color);
-  text-align: center;
-  overflow-x: hidden; 
-  height: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-family: var(--paragraph-font);
+    background-color: var(--accent2-color);
+    text-align: center;
+    overflow-x: hidden;
+    
+    /* ADD THESE THREE LINES */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* This ensures the body is at least as tall as the screen */
 }
 
 main {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2em;
+  flex: 1;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -99,6 +104,7 @@ footer {
     font-size: 0.85rem;        /* Slightly smaller text for better proportion */
     margin-top: 40px;
     border-top: 4px solid var(--primary-color);
+    flex-shrink: 0;
 }
 
 footer p {
