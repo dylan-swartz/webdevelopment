@@ -30,6 +30,7 @@ body {
   background-color: var(--accent2-color);
   text-align: center;
   overflow-x: hidden; 
+  height: 100%;
 }
 
 main {
@@ -256,4 +257,181 @@ footer a {
 
 .social-container img:hover {
     transform: scale(1.1);
+}
+/* --- CONTACT PAGE LAYOUT --- */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* --- THE CARD EFFECT --- */
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    padding: 40px;
+    text-align: left;
+}
+
+/* --- FORM STYLING --- */
+.section-title {
+    color: var(--primary-color);
+    border-left: 5px solid var(--secondary-color);
+    padding-left: 15px;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.pro-form input, .pro-form textarea, .pro-form select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+/* Interaction: Turns red when you click into it */
+.pro-form input:focus, .pro-form textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 5px rgba(184, 29, 36, 0.3);
+}
+
+/* --- BUTTON --- */
+.cta-button-red {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-family: var(--heading-font);
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background 0.3s;
+}
+
+.cta-button-red:hover {
+    background-color: #8a151b; /* Darker red on hover */
+}
+
+/* --- SIDEBAR & IMAGES --- */
+.image-container {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.image-container img {
+    width: 100%;
+    display: block;
+    filter: grayscale(20%);
+}
+
+.image-overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgba(184, 29, 36, 0.9); /* Red overlay */
+    color: white;
+    width: 100%;
+    padding: 10px;
+    font-size: 0.8rem;
+    font-family: var(--heading-font);
+    text-align: center;
+}
+
+.info-card {
+    padding: 25px;
+    border-top: 4px solid var(--secondary-color);
+}
+
+.contact-link-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.contact-link-box:last-child { border: none; }
+
+.icon { font-size: 1.2rem; }
+
+/* --- BANNER --- */
+.banner-callout {
+    background: var(--primary-color);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 40px;
+}
+
+.banner-callout p { color: white; margin: 0; }
+
+/* Mobile Stack */
+@media (max-width: 900px) {
+    .contact-grid { grid-template-columns: 1fr; }
+}
+/* --- FINAL CONTACT HEADING STYLE --- */
+/* --- FORCE RED HEADING --- */
+body main .form-container h2 {
+    color: #B81D24 !important; /* Direct hex code for Tytan Red */
+    border-left: 5px solid #000000 !important;
+    padding-left: 15px !important;
+    text-align: left !important;
+    margin-bottom: 30px !important;
+    display: block !important;
+}
+/* --- VIDEO SHOWCASE STYLING --- */
+.video-showcase {
+    margin: 80px auto;
+    max-width: 1000px; 
+    margin: 50px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+/* This makes the red heading look like your Contact Page headings */
+.video-showcase .section-title {
+    color: var(--secondary-color);
+    border-left: 5px solid var(--primary-color);
+    padding-left: 15px;
+    display: inline-block;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.video-frame {
+    position: relative;
+    padding-bottom: 56.25%; /* Maintains 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 15px;
+    border: 4px solid var(--primary-color); /* Bold black border */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.video-frame iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }

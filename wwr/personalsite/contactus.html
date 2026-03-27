@@ -23,48 +23,72 @@
     <a href="contactus.html">Contact us</a>
 </nav>
 
-<main>
-        <div class="content-images">
-            <section class="form-container">
-                <h2>Request a quote</h2>
-                <form action="#" method="post">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
-
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-
-                    <label for="phone">Phone</label>
-                    <input type="tel" id="phone" name="phone">
-
-                    <label for="property">Property Type</label>
-                    <input type="text" id="property" name="property" placeholder="Residential or Commercial">
-
-                    <label for="comments">Additional comments</label>
-                    <textarea id="comments" name="comments" rows="4"></textarea>
-
-                    <button type="submit" class="colored">Submit</button>
-                </form>
-            </section>
-
-            <section class="contact-sidebar">
-                <img src="images/cedarbreaks.jpg" alt="Beautiful view of Cedar Breaks near Cedar City">
-                
-                <div class="contact-info">
-                    <h3>Contact info</h3>
-                    <p class="colored">(435) 263-0506</p>
-                    <p>123 Security Way, Cedar City, UT</p>
-                    <p>contact@tytansecurity.com</p>
+<main class="contact-page">
+    <div class="contact-grid">
+        <section class="card form-card">
+            <h2>Request a quote</h2>
+            <form action="#" method="post" class="pro-form">
+                <div class="input-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required>
                 </div>
-            </section>
-        </div>
 
-        <hr>
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                </div>
 
-        <section>
-            <p>Need a hand with your system or need an upgrade? Our Cedar City team is standing by.</p>
+                <div class="input-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="(435) 000-0000">
+                </div>
+
+                <div class="input-group">
+                    <label for="property">Property Type</label>
+                    <select id="property" name="property">
+                        <option value="residential">Residential</option>
+                        <option value="commercial">Commercial</option>
+                        <option value="industrial">Industrial/Other</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="comments">Project Details</label>
+                    <textarea id="comments" name="comments" rows="4" placeholder="How can we help protect your property?"></textarea>
+                </div>
+
+                <button type="submit" class="cta-button-red">Send Request</button>
+            </form>
         </section>
-    </main>
+
+        <aside class="contact-sidebar">
+            <div class="image-container">
+                <img src="images/cedarbreaks.jpg" alt="Cedar Breaks National Monument">
+                <div class="image-overlay">Local Service, National Strength</div>
+            </div>
+            
+            <div class="card info-card">
+                <h3 class="info-title">Direct Contact</h3>
+                <div class="contact-link-box">
+                    <span class="icon">📞</span>
+                    <p>(435) 263-0506</p>
+                </div>
+                <div class="contact-link-box">
+                    <span class="icon">📍</span>
+                    <p>630 W 200 N, Cedar City, UT 84720</p>
+                </div>
+                <div class="contact-link-box">
+                    <span class="icon">✉️</span>
+                    <p>data@tytansecurity.com</p>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <section class="banner-callout">
+        <p>Expert security solutions for the Cedar City community.</p>
+    </section>
+</main>
 
    <footer>
     <p>&copy; 2026 Tytan Security | <a href="site-plan.html">Site Plan</a></p>
