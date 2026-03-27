@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles\personalplan.css">
     <link rel="icon" type="image/x-icon" href="images/tytan.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 <body>
     <header>
@@ -25,32 +26,60 @@
     <a href="contactus.html">Contact us</a>
 </nav>
 
-<main>
-        <h2>Our Security Solutions</h2>
+<main class="services-page">
+    <h2 class="section-title">Our Security Solutions</h2>
 
-        <div class="content-images">
-            <section>
-                <h3>Smart Surveillance</h3>
-                <p>High-definition cameras with remote access so you can watch over your property from anywhere.</p>
-            </section>
-            <img src="images/camera.jpg" alt="Surveillance Camera">
+    <div class="service-row">
+        <div class="service-image">
+            <img src="images/camera.jpg" alt="High-definition Surveillance Camera">
         </div>
-
-        <div class="content-images">
-            <img src="images/sensor.jpg" alt="Intrusion Sensor">
-            <section>
-                <h3>Intrusion Detection</h3>
-                <p>Advanced sensors that detect unauthorized entry and alert our monitoring center instantly.</p>
-            </section>
+        <div class="service-text card">
+            <div class="service-header">
+                <span class="material-symbols-outlined service-icon">videocam</span>
+                <h3 class="red-subtitle">Smart Surveillance Systems</h3>
+            </div>
+            <h4>See Everything, From Anywhere.</h4>
+            <p>Don't settle for grainy DIY footage. Our high-definition cameras feature infrared night vision and AI-driven motion tracking.</p>
         </div>
+    </div>
 
-        <hr>
-        
-        <section>
+    <div class="service-row reverse">
+        <div class="service-image">
+            <img src="images/iqpanel.jpg" alt="Advanced Intrusion Sensor">
+        </div>
+        <div class="service-text card">
+            <div class="service-header">
+                <span class="material-symbols-outlined service-icon">shield</span>
+                <h3 class="red-subtitle">Intrusion Detection Technology</h3>
+            </div>
+            <h4>A Shield for Your Entry Points.</h4>
+            <p>Our sensors do more than just beep. Tytan Security creates a perimeter that acts as both a deterrent and a rapid-response trigger.</p>
+        </div>
+    </div>
+
+    <div class="service-row">
+        <div class="service-image">
+            <img src="images/hikvision.png" alt="Commercial Access Control">
+        </div>
+        <div class="service-text card">
+            <div class="service-header">
+                <span class="material-symbols-outlined service-icon">apartment</span>
+                <h3 class="red-subtitle">Commercial Security Solutions</h3>
+            </div>
+            <h4>Scalable Protection for Your Business.</h4>
+            <p>Manage your assets with precision. Our commercial packages include access control and multi-location management.</p>
+        </div>
+    </div>
+
+    <section class="banner-callout">
+        <div class="service-header" style="justify-content: center;">
+            <span class="material-symbols-outlined service-icon">verified_user</span>
             <h3>Key Features</h3>
-            <p class="colored">All systems include mobile app integration and 24-hour backup power.</p>
-        </section>
-    </main>
+        </div>
+        <p>All systems include mobile app integration and 24-hour backup power.</p>
+        <a href="contactus.html" class="cta-button-red small-btn">Get in contact with a security expert</a>
+    </section>
+</main>
 
     <footer>
     <p>&copy; 2026 Tytan Security | <a href="site-plan.html">Site Plan</a></p>
