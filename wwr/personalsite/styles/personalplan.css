@@ -214,8 +214,20 @@ footer a {
 
 /* --- MOBILE RESPONSIVENESS --- */
 @media screen and (max-width: 900px) {
+    html, body{
+        height: 100%;
+        margin: 0;
+    }
     body {
+        display: flex;
+        flex-direction: column;
         text-align: center;
+    }
+    main {
+    flex: 1 0 auto; /* This pushes the footer to the bottom */
+    }
+    footer {
+    flex-shrink: 0;
     }
 
     /* 1. Fix the Header & Nav */
